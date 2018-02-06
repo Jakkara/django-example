@@ -1,0 +1,24 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+<body>
+    <div class="return-home">
+        <a href="{% url 'home'%}">
+            <img src="{% static 'home-bw.png' %}" onmouseover="this.src='{% static "home-highlight.png" %}';" onmouseout="this.src='{% static "home-bw.png" %}';" />
+        </a>
+    </div>
+    <div class='wrapper'>
+        <a href="{% url 'articles:list' %}"><img class="banner" src="{% static '808s-banner.png' %}" alt=""></a> 
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

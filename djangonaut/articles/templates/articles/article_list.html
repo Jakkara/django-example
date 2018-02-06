@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class='articles'>
+        {% for article in articles %}
+            <div class='article griditem'>
+                <a href="{% url 'articles:detail' slug=article.slug %}">
+                    <img class="list-thumb" src="{{ article.thumb.url}}" alt="{{article.title}} thumbnail">
+                </a>
+                <p class='thumbtext'>{{article.title}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

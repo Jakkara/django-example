@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div>
+    <div class='article article-detail'>
+        <div class="griditem"><img class="list-thumb" src="{{ article.thumb.url}}" alt="cover thumbnail"></div>
+        <p class="thumbtext">{{ article.title }}</p>
+        <p class="detail-info">{{ article.body}}</p>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'home-style.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="center">
+        <a href="{% url 'articles:list' %}"><img class="logo" src="{% static '808s-logo.png' %}" alt="artist discography"></a> 
+    </div>
+    <div class="topleft">
+        <a href="https://github.com/Jakkara"><h1>Github</h1></a>
+        <a href="https://linkedin.com/in/jali-rainio"><h1>LinkedIn</h1></a>
+        <a href="{% static 'Jali_Rainio-CV-.pdf'%}"><h1>CV</h1></a>
+    </div>
+</body>
+</html>

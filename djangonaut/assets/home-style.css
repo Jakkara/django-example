@@ -1,0 +1,32 @@
+/* #CF8271 orange, #3B4357 blue, #FFFFFF white*/
+* {
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+body{
+    height: 100vh;
+    display:grid;
+    background: #3B4357;
+    grid-gap: 1%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "topleft top topright"
+                        "left center right"
+                        "bottomleft bottom bottomright";
+}
+.center {
+    grid-area: center;
+}
+.topleft{
+    background-color: #CF8271;
+    padding: 20% 0 20% 0;
+    text-align: center;
+    
+}
+.logo{
+    align-content: center;
+    width:100%;
+}

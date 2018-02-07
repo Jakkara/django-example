@@ -3,9 +3,9 @@
 {% block content %}
 <div>
     <div class='article article-detail'>
-        <div class="griditem"><img class="list-thumb" src="{{ article.thumb.url}}" alt="cover thumbnail"></div>
-        <p class="thumbtext">{{ article.title }}</p>
-        <p class="detail-info">{{ article.body}}</p>
+        <div class="detail-image"><img class="list-thumb" src="{{ article.thumb.url}}" alt="cover thumbnail"></div>
+        <p class="thumbtext detailed">{{ article.title }} <br> Tekstiä</p>
+        <p class="detail-info">{{ article.body | linebreaks}}</p>
         
     </div>
 </div>
